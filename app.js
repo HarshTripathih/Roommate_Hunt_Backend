@@ -693,7 +693,7 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     log(`Listening on port ${PORT}...`);
 });
 
