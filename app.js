@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const path = require('path')
 
 // mongoose and mongo connection
@@ -694,7 +694,7 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-    log(`Listening on port ${port}...`);
+    log(`Listening on port ${PORT}...`);
 });
 
 
