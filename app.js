@@ -43,7 +43,7 @@ app.use(bodyParser.json());
 // cors
 const cors = require('cors')
 if (env !== 'production') { app.use(cors()) }
-
+app.use(cors());
 
 
 // express-session for managing user sessions
