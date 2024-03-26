@@ -48,7 +48,7 @@ const corsOptions = {
     credentials: true // Allow credentials (cookies) to be sent
   };
 
-if (env !== 'production') { app.use(cors()) }
+if (env !== 'production') { app.use(cors(corsOptions)) }
 app.use(cors(corsOptions));
 
 
