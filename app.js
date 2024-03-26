@@ -42,8 +42,14 @@ app.use(bodyParser.json());
 
 // cors
 const cors = require('cors')
+
+const corsOptions = {
+    origin: '*', // Allow requests from any origin
+    credentials: true // Allow credentials (cookies) to be sent
+  };
+
 if (env !== 'production') { app.use(cors()) }
-app.use(cors());
+app.use(cors(corsOptions));
 
 
 // express-session for managing user sessions
