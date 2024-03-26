@@ -44,11 +44,12 @@ app.use(bodyParser.json());
 const cors = require('cors')
 
 const corsOptions = {
-    origin: '*', // Allow requests from any origin
-    credentials: true // Allow credentials (cookies) to be sent
-  };
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
 
-if (env !== 'production') { app.use(cors(corsOptions)) }
+// if (env !== 'production') { app.use(cors(corsOptions)) }
 app.use(cors(corsOptions));
 
 
